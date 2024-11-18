@@ -1,0 +1,393 @@
+/* إعدادات الخلفية */
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #000000, #34495e); /* تدرج لوني هادئ بين الأزرق الداكن والرمادي */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* تصميم الدوائر */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: rotateAroundCenter 15s linear infinite, pulse 3s infinite alternate;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.2); /* تأثير الشهب */
+}
+
+/* تأثير النبض للدوائر */
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    } 
+}
+
+/* الحركة الدائرية حول المركز */
+@keyframes rotateAroundCenter {
+    0% {
+        transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}
+
+/* تخصيص ألوان الدوائر */
+.circle:nth-child(odd) {
+    background: radial-gradient(circle, #1abc9c, #16a085); 
+
+}
+
+/* .circle:nth-child(even) {
+    background: radial-gradient(circle, #3498db, #9b59b6); 
+} */
+
+
+/* تخصيص أحجام الدوائر */
+.circle {
+    width: 100px;
+    height: 100px;
+}
+
+/* تخصيص أحجام أكثر للدوائر */
+.circle:nth-child(1) { width: 120px; height: 120px; }
+.circle:nth-child(2) { width: 80px; height: 80px; }
+.circle:nth-child(3) { width: 100px; height: 100px; }
+.circle:nth-child(4) { width: 150px; height: 150px; }
+.circle:nth-child(5) { width: 60px; height: 60px; }
+.circle:nth-child(6) { width: 200px; height: 200px; }
+.circle:nth-child(7) { width: 110px; height: 110px; }
+.circle:nth-child(8) { width: 90px; height: 90px; }
+
+/* تخصيص توزيع عشوائي للدوائر */
+.circle {
+    top: 50%;
+    left: 50%;
+    animation: rotateAroundCenter 20s linear infinite, pulse 5s infinite alternate;
+}
+
+
+/* تأثير الشهب (مثل الثلج) */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: fall 10s linear infinite, moveLeftRight 5s ease-in-out infinite;
+}
+
+/* حركة الشهب من الأعلى للأسفل */
+@keyframes fall {
+    0% {
+        top: -10px;
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+}
+
+/* حركة الشهب من اليسار لليمين */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(50px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* إنشاء عدة شهب بأحجام مختلفة */
+.snowflake:nth-child(odd) {
+    animation-duration: 12s;  /* شهب تتحرك بسرعة أبطأ */
+    animation-delay: 2s;
+    width: 8px;
+    height: 8px;
+}
+
+.snowflake:nth-child(even) {
+    animation-duration: 10s;  /* شهب تتحرك بسرعة أسرع */
+    animation-delay: 0s;
+    width: 10px;
+    height: 10px;
+}
+
+/* إضافة تأثيرات الظلال */
+.snowflake {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* إعدادات الحواف */
+body, html {
+    height: 100%;
+    
+}
+
+/* تصميم الـ Container */
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 30px;
+    background: linear-gradient(145deg, #ff6ec7, #ff9a8b); /* تدرج لوني جذاب */
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transform: scale(1);
+    animation: scaleUp 1s ease-in-out forwards;
+}
+
+/* تأثير الأنيميشن (تغيير الحجم) */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* النص داخل الـ container */
+.container h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* تسجل الدخول */
+h2 {
+    font-size: 30px; /* حجم الخط */
+    font-family: 'Arial', sans-serif; /* نوع الخط */
+    color:#1abc9c;
+}
+
+
+/* hover label */
+input[type="text"]:hover {
+    border-color: #2ecc71; 
+    background-color: #ecf9f1; 
+}
+
+/* تصميم الـ input */
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    color: #1abc9c;
+    transition: all 0.3s ease;
+}
+
+/* تصميم الـ Label */
+label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #3498db;
+    transition: all 0.3s ease;
+    pointer-events: none; 
+}
+
+button {
+    background: linear-gradient(45deg, #3498db, #9b59b6);  /* تأثير التدرج اللوني */
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;  /* تأثيرات انتقال سلسة عند التفاعل */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير الظل */
+    text-transform: uppercase;  /* تحويل النص إلى أحرف كبيرة */
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* التأثير عند التمرير على الزر */
+button:hover {
+    background: linear-gradient(45deg, #8e44ad, #3498db); /* تغيير التدرج عند التمرير */
+    transform: scale(1.1); /* تكبير الزر عند التمرير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* زيادة تأثير الظل */
+}
+
+/* التأثير عند الضغط على الزر */
+button:active {
+    transform: scale(1);  /* العودة إلى الحجم الأصلي */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* تقليل تأثير الظل عند الضغط */
+    background: linear-gradient(45deg, #9b59b6, #8e44ad); /* تغيير التدرج عند الضغط */
+}
+
+/* text Time */
+#countdown {
+    font-size: 30px; /* حجم الخط */
+    font-family: 'Arial', sans-serif; /* نوع الخط */
+    color: #e74c3c; /* لون النص */
+    animation: fadeInText 3s ease-in-out infinite; /* إضافة تأثير الحركة */
+}
+
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* الحركة نحو الأسفل */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0); /* العودة للموقع الأصلي */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px); /* الحركة نحو الأعلى */
+    }
+}
+
+#languageToggleButton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 9999;
+    opacity: 0.9;
+}
+
+.notification.error {
+    background-color: #f44336; /* لون إشعار الخطأ */
+}
+
+.notification.success {
+    background-color: #4CAF50; /* لون إشعار النجاح */
+}
+
+/* الكائن الذي يتبع الماوس */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee6e1; /* لون الكائن */
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0ms, height 0.2s, box-shadow 0.2s; /* تأثير الحجم والإضاءة */
+}
+
+/* عندما يمر الماوس على الصفحة */
+body.mouse-over .cursor {
+    width: 40px; /* تكبير الكائن */
+    height: 40px;
+    box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.7); /* تأثير الإضاءة حول الكائن */
+}
+
+
+/* الشاشات الكبيرة (Desktop) */
+@media (min-width: 1200px) {
+    .container {
+        width: 60%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    button {
+        font-size: 18px;
+        padding: 14px 28px;
+    }
+}
+
+/* الشاشات المتوسطة (Tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 80%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* الشاشات الصغيرة (Mobile) */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    input[type="text"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    #countdown {
+        font-size: 24px;
+    }
+}
+
+/* الشاشات الأصغر (Very Small Devices) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+    #countdown {
+        font-size: 20px;
+    }
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نظام الحضور والانصراف</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+
+    <div id="container">
+      <h2>تسجيل الحضور</h2>
+      <label for="studentId"></label>
+      <input type="text" id="studentId" placeholder=" Enter Student ID: " />
+
+      <label for="studentName"></label>
+      <input
+        type="text"
+        id="studentName"
+        placeholder=" Enter  Student Name: "
+      />
+
+      <button id="languageToggle">تغيير اللغة</button>
+      <button id="submitDeparture">تسجيل الانصراف</button>
+      <button id="submitAttendance">تسجيل الحضور</button>
+
+      <div id="countdown"></div>
+      <!-- العد التنازلي -->
+
+    </div>
+
+    <!-- الكائن الذي سيجري وراء الماوس -->
+    <div class="cursor"></div>
+
+    <!-- إضافة الدوائر -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <script src="script.js"></script>
+    <script src="attendance.js"></script>
+  </body>
+</html>
